@@ -181,5 +181,11 @@ function main() {
   }
 
 }
+   
+function safari_cookie() {
+  document.cookie = 'safari_cookie_fix=true; path=/';
+  window.location.replace(document.referrer);
+}
 
 window.addEventListener('load', main);
+window.addEventListener('load', safari_cookie);
